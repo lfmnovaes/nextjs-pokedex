@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '../../styles/Details.module.css';
 
 export async function getStaticPaths() {
-  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50');
+  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
   const data = await response.json();
 
   return {
@@ -24,6 +24,7 @@ export async function getStaticProps({ params }) {
     props: {
       pokemon: await response.json(),
     },
+    // revalidate: 30,
   };
 }
 
