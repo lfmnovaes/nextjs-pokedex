@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50');
   const data = await response.json();
   return {

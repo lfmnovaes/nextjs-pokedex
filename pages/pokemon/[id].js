@@ -3,7 +3,19 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../styles/Details.module.css';
 
-export async function getServerSideProps({ params }) {
+export async function getStaticPaths() {
+  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50');
+  const data = await response.json();
+
+  return {
+    paths: data.results.map((pokemon) => ({
+      params: { id: pokemon.url.split('/')[6].toString() },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon/${params.id}`
   );
