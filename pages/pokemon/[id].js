@@ -1,31 +1,21 @@
-import { useRouter } from 'next/router';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../styles/Details.module.css';
 
-export default function Details() {
-  const {
-    query: { id },
-  } = useRouter();
+export async function getServerSideProps({ params }) {
+  const response = await fetch(
+    `https://pokeapi.co/api/v2/pokemon/${params.id}`
+  );
 
-  const [pokemon, setPokemon] = useState(null);
+  return {
+    props: {
+      pokemon: await response.json(),
+    },
+  };
+}
 
-  useEffect(() => {
-    async function getPokemons() {
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-      const data = await response.json();
-      setPokemon(data);
-    }
-    if (id) {
-      getPokemons();
-    }
-  }, []);
-
-  if (!pokemon) {
-    return null;
-  }
-
+export default function Details({ pokemon }) {
   return (
     <div>
       <Head>
@@ -40,7 +30,7 @@ export default function Details() {
         <div>
           <img
             className={styles.picture}
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
             alt={pokemon.name}
           />
         </div>

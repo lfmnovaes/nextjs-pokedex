@@ -1,22 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
-  const [pokemon, setPokemon] = useState([]);
+export async function getServerSideProps() {
+  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50');
+  const data = await response.json();
+  return {
+    props: {
+      pokemon: data.results,
+    },
+  };
+}
 
-  useEffect(() => {
-    async function getPokemons() {
-      const response = await fetch(
-        'https://pokeapi.co/api/v2/pokemon?limit=50'
-      );
-      const data = await response.json();
-      setPokemon(data.results);
-    }
-    getPokemons();
-  }, []);
-
+export default function Home({ pokemon }) {
   return (
     <div className={styles.container}>
       <Head>
