@@ -13,10 +13,10 @@ export default function Home() {
       );
       const data = await response.json();
       setPokemon(data.results);
-      console.log(pokemon);
     }
     getPokemons();
   }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +29,9 @@ export default function Home() {
             <Link href={`/pokemon/${pokemon.url.split('/')[6]}`}>
               <a>
                 <img
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.url.split('/')[6]}.svg`}
+                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${
+                    pokemon.url.split('/')[6]
+                  }.svg`}
                   alt={pokemon.name}
                 />
                 <h3>{pokemon.name}</h3>
