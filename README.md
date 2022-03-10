@@ -14,7 +14,7 @@
   <h1 align="center">NextJS Pokedex</h1>
 
   <p align="center">
-    A small NextJS project that gather data from [PokeAPI](https://pokeapi.co/) and server-side render with the Static Site Generation feature from NextJS.
+    A small NextJS project that gather data from <a href="https://pokeapi.co/">PokéAPI</a> and server-side render with the Static Site Generation feature from NextJS.
     <br />
     <a href="https://github.com/lfmnovaes/nextjs-pokedex/wiki"><strong>Explore the docs »</strong></a>
     <br />
@@ -56,7 +56,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Front Screenshot of NextJS Pokedex][front-ss.png]](./front-ss.png)
+![Front Screenshot of NextJS Pokedex](./front-ss.png)
 
 The objective of this project was to lear a bit more of the NextJS framework and work with his server side pre render feature.
 
@@ -74,7 +74,7 @@ The objective of this project was to lear a bit more of the NextJS framework and
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
