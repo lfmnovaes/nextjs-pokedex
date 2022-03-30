@@ -17,7 +17,7 @@ export default function Home({ pokemon }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Pokemon List</title>
+        <title>NextJS Pokedex</title>
       </Head>
       <h2>Pokemon List</h2>
       <div className={styles.grid}>

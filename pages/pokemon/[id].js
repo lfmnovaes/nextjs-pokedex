@@ -32,7 +32,9 @@ export default function Details({ pokemon }) {
   return (
     <div>
       <Head>
-        <title>{pokemon.name}</title>
+        <title>
+          {pokemon.id} - {pokemon.name}
+        </title>
       </Head>
       <div>
         <Link href="/">

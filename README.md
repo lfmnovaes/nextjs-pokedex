@@ -56,7 +56,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Front Screenshot of NextJS Pokedex](./front-ss.png)
+![Preview of the NextJS Pokedex WebApp](./preview.png)
 
 The objective of this project was to lear a bit more of the NextJS framework and work with his server side pre render feature.
 
