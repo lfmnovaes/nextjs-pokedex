@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../styles/Details.module.css';
+import Image from 'next/image';
 
 export async function getStaticPaths() {
   const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
@@ -19,10 +20,15 @@ export async function getStaticProps({ params }) {
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon/${params.id}`
   );
-
+  const data = await response.json();
   return {
     props: {
-      pokemon: await response.json(),
+      pokemon: {
+        id: data.id,
+        name: data.name,
+        types: data.types,
+        stats: data.stats,
+      }
     },
     // revalidate: 30,
   };
@@ -43,10 +49,12 @@ export default function Details({ pokemon }) {
       </div>
       <div className={styles.layout}>
         <div>
-          <img
+          <Image
             className={styles.picture}
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
             alt={pokemon.name}
+            width="300"
+            height="300"
           />
         </div>
         <div>
