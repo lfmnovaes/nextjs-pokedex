@@ -14,7 +14,7 @@
   <h1 align="center">NextJS Pokedex</h1>
 
   <p align="center">
-    A small NextJS project that gather data from <a href="https://pokeapi.co/">PokéAPI</a> and server-side render with the Static Site Generation feature from NextJS.
+    A small NextJS project that gathers data from <a href="https://pokeapi.co/">PokéAPI</a> and uses the server-side render feature from NextJS.
     <br />
     <a href="https://github.com/lfmnovaes/nextjs-pokedex/wiki"><strong>Explore the docs »</strong></a>
     <br />
@@ -58,7 +58,7 @@
 
 ![Preview of the NextJS Pokedex WebApp](./preview.png)
 
-The objective of this project was to lear a bit more of the NextJS framework and work with his server side pre render feature.
+The objective of this project is to learn a bit more about the NextJS framework and work with the server-side pre-render feature.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -108,7 +108,7 @@ For example on Ubuntu 20.04 LTS you can follow these [instructions](https://gith
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Open the page and click on each pokemon to see the automated page created for each pokemon with their stats.
+Open the page and click on each pokemon their stats in a pre-rendered page.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -140,7 +140,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -156,7 +156,7 @@ Project Link: [https://github.com/lfmnovaes/nextjs-pokedex](https://github.com/l
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Othneildrew](https://github.com/othneildrew/Best-nextjs-pokedex) for the README template
+* [Othneildrew](https://github.com/othneildrew/Best-README-template) for the README template
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -174,4 +174,3 @@ Project Link: [https://github.com/lfmnovaes/nextjs-pokedex](https://github.com/l
 [license-url]: https://github.com/lfmnovaes/nextjs-pokedex/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lfmnovaes/
-[product-screenshot]: images/screenshot.png
